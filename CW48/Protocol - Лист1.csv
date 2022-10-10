@@ -1,0 +1,26 @@
+,,,,,,
+,,,,,,5
+,Модель (название),Параметры (назв),Параметры (знач),CrV (f1_score),val (f1_score),
+,,,,,,
+,Tree,,,,,
+,,max_depth,13,0.9431,0.9469,
+,,min_samples_split,19,,,
+,,max_features,17,,,
+,Random Forest,,,,,
+,,n_estimators,350,0.9560,0.9577,3
+,,Creterion,entropy,,,
+,,max_depth,42,,,
+,AdaBoost,,,,0.9567,
+,,Base_est,DecisionTreeClassifier (max_depth=5),,,
+,,lr,0.1,,,
+,,N-est,200,,,
+,GrBoost,,,,0.9584,2
+,,max_depth,,,,
+,,lr,,,,
+,,N-est,,,,
+,SVM,,,,,
+,,kernel,rbf,0.9232,0.9477,
+,,C,1,,,
+,DNN,слоев 3,,0.9627,0.9626,1
+,,нейронов на слой 256,,,,
+,,L2 на слой,,,,
