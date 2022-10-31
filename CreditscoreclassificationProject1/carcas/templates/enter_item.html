@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{{ super () }}
+
+<div class = "container">
+
+
+<div class = "row">
+<div class = "col-md-8">
+
+   <label >Ввод данных для нового прогноза </label>
+
+   <br>
+
+</div>
+</div>
+
+
+<div class = "row">
+<div class = "col-md-8">
+
+
+<form action="/enter_item" enctype="multipart/form-data" method="post">  
+
+<table class="table table-striped table-hover">
+  <tr>
+     <td><label class="text-primary"> Month Of Taking Loan: </label></td>
+     <td><select name="Month">
+     <option disabled>Choose Month</option>
+     <option value="0">January</option>
+     <option value="1">February</option>
+     <option value="2">March</option>
+     <option value="3">April</option>
+     <option value="4">May</option>
+     <option value="5">June</option>
+     <option value="6">July</option>
+     <option value="7">Augusth</option>
+     
+        </select></td>
+  </tr> 
+
+
+  <tr>
+     <td><label class="text-primary">Age of Client: </label></td>
+     <td><input type="number" name="Age" size = 80 value="" requied/></td>
+  </tr> 
+
+
+
+  <tr>
+     <td><label class="text-primary">AnnualIncome of the Client: </label></td>
+     <td><input type="number" name="AnnualIncome" size = 80 value="" requied/></td>
+          
+  </tr>
+
+  <tr>
+     <td><label class="text-primary">MonthlyInhandSalary of the Client: </label></td>
+     <td><input type="number" name="MonthlyInhandSalary" size = 80 value="" requied/></td>     
+  </tr>
+  
+  <tr>
+     <td><label class="text-primary">NumBankAccounts of the Client: </label></td>
+     <td><input type="number" name="NumBankAccounts" size = 40 value="" requied/></td>     
+  </tr>
+  
+  <tr>
+     <td><label class="text-primary"> NumCreditCard of the Client : </label></td>
+     <td><input type="number" name="NumCreditCard" size = 40 value="" requied/></td>
+  </tr> 
+  
+   <tr>
+      <td><label class="text-primary"> Average InterestRate of all Loans: </label></td>
+      <td><input type="number" name="InterestRate" size = 40 value="" requied/></td>
+   </tr> 
+   
+   
+    <tr>
+       <td><label class="text-primary"> NumofLoan of the Client: </label></td>
+       <td><input type="number" name="NumofLoan" size = 40 value="" requied/></td>
+    </tr> 
+    
+     <tr>
+        <td><label class="text-primary"> Delayfromduedate: </label></td>
+        <td><input type="number" name="Delayfromduedate" size = 40 value="" requied/></td>
+     </tr> 
+     
+     
+      <tr>
+         <td><label class="text-primary"> NumofDelayedPayment: </label></td>
+         <td><input type="number" name="NumofDelayedPayment" size = 40 value="" requied/></td>
+      </tr> 
+      
+      
+       <tr>
+          <td><label class="text-primary"> NumCreditInquiries: </label></td>
+          <td><input type="number" name="NumCreditInquiries" size = 40 value="" requied/></td>
+       </tr> 
+       
+       
+       <tr>
+          <td><label class="text-primary"> CreditMix Of the Client: </label></td>
+          <td><select name="CreditMix">
+          <option disabled>Choose your CreditMix </option>
+          <option value="0">Standard</option>
+          <option value="1">Good</option>
+          <option value="2">Bad</option>
+          <option value="3">NoCreditMix</option>
+        
+          
+             </select></td>
+       </tr> 
+       
+       <tr>
+          <td><label class="text-primary"> OutstandingDebt: </label></td>
+          <td><input type="number" name="OutstandingDebt" size = 40 value="" requied/></td>
+       </tr> 
+       
+       
+       <tr>
+          <td><label class="text-primary"> CreditUtilizationRatio: </label></td>
+          <td><input type="number" name="CreditUtilizationRatio" size = 40 value="" requied/></td>
+       </tr> 
+       
+       
+       <tr>
+          <td><label class="text-primary"> PaymentofMinAmount: </label></td>
+          <td><input type="number" name="PaymentofMinAmount" size = 40 value="" requied/></td>
+       </tr> 
+       
+       
+       <tr>
+          <td><label class="text-primary"> TotalEMIpermonth: </label></td>
+          <td><input type="number" name="TotalEMIpermonth" size = 40 value="" requied/></td>
+       </tr>       
+       
+       
+  <tr>
+     <td><label class="text-primary"> PaymentBehaviour: </label></td>
+     <td><select name="PaymentBehaviour">
+        <option disabled>Выберите вариант</option>
+        <option value="1">LowspentSmallvaluepayments</option>
+        <option value="2">HighspentMediumvaluepayments</option>
+        <option value="3">LowspentMediumvaluepayments</option>
+        <option value="4">HighspentLargevaluepayments</option>
+        <option value="5">HighspentSmallvaluepayments</option>
+        <option value="6">LowspentLargevaluepayments</option>
+        <option value="7">NoPaymentBehaviour</option>
+        </select></td>
+  </tr> 
+  
+       <tr>
+          <td><label class="text-primary"> MonthlyBalance: </label></td>
+          <td><input type="number" name="MonthlyBalance" size = 40 value="" requied/></td>
+       </tr> 
+       
+       <tr>
+          <td><label class="text-primary"> CreditHistoryYears: </label></td>
+          <td><input type="number" name="CreditHistoryYears" size = 40 value="" requied/></td>
+       </tr>       
+  <tr>
+     <td><label class="text-primary"> Occupation: </label></td>
+     <td><select name="Occupation">
+        <option disabled>Выберите вариант</option>
+        <option value="1">Accountant</option>
+        <option value="2">Architect</option>
+        <option value="3">Developer</option>
+        <option value="4">Doctor</option>
+        <option value="5">Engineer</option>
+        <option value="6">Entrepreneur</option>
+        <option value="7">Lawyer</option>
+        <option value="8">Manager</option>
+        <option value="9">Mechanic</option>
+        <option value="10">MediaManager</option>
+        <option value="11">Musician</option>
+        <option value="12">NoOccupation</option>
+        <option value="13">Scientist</option>
+        <option value="14">Teacher</option>
+        <option value="15">Writer</option>
+        
+        </select></td>
+  </tr>
+
+
+  <tr>
+     <td> </td>
+     <td align="right"> <input type="submit" class="btn btn-primary" value="Получить прогноз" /></td>
+  </tr>
+
+</table>
+</form> 
+</div>
+</div>
+
+
+</div>
+
+<div class = "container text-danger">
+  {% for msg in get_flashed_messages() %}
+    <div>{{msg}}</div>
+  {% endfor %} 
+</div>
+{% endblock content %}
